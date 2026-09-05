@@ -407,7 +407,12 @@ function Picker({ open, title, moderators, onPick, onClose }: PickerProps) {
                     <span className="font-medium text-white">{mod.nick_name}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${pos.text} ${pos.border} ${pos.bg}`}>{pos.label}</span>
+                    <span 
+  className="rounded-full border px-2.5 py-0.5 text-xs font-medium" 
+  style={{ backgroundColor: pos.bg, color: pos.color, borderColor: pos.border }}
+>
+  {pos.label}
+</span>   
                     {isSelected && <Check size={18} className="text-cyan-400" />}
                   </div>
                 </button>
