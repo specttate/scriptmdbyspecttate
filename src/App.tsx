@@ -32,18 +32,20 @@ interface PositionInfo {
 }
 
 const POSITIONS: Record<number, PositionInfo> = {
-  1: { label: 'Модератор', color: '#60a5fa', text: 'text-blue-300', bg: 'bg-blue-500/10', border: 'border-blue-500/30' },
-  2: { label: 'Ст. Модератор', color: '#22d3ee', text: 'text-cyan-300', bg: 'bg-cyan-500/10', border: 'border-cyan-500/30' },
-  3: { label: 'Куратор', color: '#f59e0b', text: 'text-amber-300', bg: 'bg-amber-500/10', border: 'border-amber-500/30' },
-  4: { label: 'Зам. Руководителя', color: '#f97316', text: 'text-orange-300', bg: 'bg-orange-500/10', border: 'border-orange-500/30' },
-  5: { label: 'Руководитель', color: '#ef4444', text: 'text-red-300', bg: 'bg-red-500/10', border: 'border-red-500/30' },
+  1: { label: 'Мл. Модератор', color: '#60a5fa', text: '#ffffff', bg: '#1e3a8a', border: '#3b82f6' },
+  2: { label: 'Модератор', color: '#22d3ee', text: '#ffffff', bg: '#164e63', border: '#06b6d4' },
+  3: { label: 'Ст. Модератор', color: '#f59e0b', text: '#ffffff', bg: '#78350f', border: '#d97706' },
+  4: { label: 'Куратор', color: '#f97316', text: '#ffffff', bg: '#7c2d12', border: '#ea580c' },
+  5: { label: 'Зам. Гл. Модератора', color: '#ef4444', text: '#ffffff', bg: '#7f1d1d', border: '#dc2626' },
+  6: { label: 'Гл. Модератор', color: '#a855f7', text: '#ffffff', bg: '#581c87', border: '#9333ea' },
 };
+
 
 function getPositionInfo(position: number): PositionInfo {
   return POSITIONS[position] || POSITIONS[1];
 }
 function getNextPosition(position: number): number {
-  return position < 5 ? position + 1 : 5;
+  return position < 6 ? position + 1 : 6;
 }
 function getPrevPosition(position: number): number {
   return position > 1 ? position - 1 : 1;
