@@ -1,3 +1,10 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  [[headers]]
+  for = "/*"
+  [headers.values]
+    # Разрешаем встраивание сайта в фреймы (включая песочницу Google)
+    X-Frame-Options = "ALLOWALL"
+    Content-Security-Policy = "frame-ancestors 'self' https://*.google.com https://*.googleusercontent.com;"
+    
