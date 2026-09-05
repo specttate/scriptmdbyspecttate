@@ -13,4 +13,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+export default defineConfig({
+  base: '/scriptmdbyspecttate/', // Обязательно с косыми чертами
+  // ... остальные настройки
+})
 });
